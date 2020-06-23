@@ -95,7 +95,8 @@ showInfo() {
               
     render(){
         return (
-                <div>
+               
+                <div>        
                 <div>
               <Drawer
               open={this.state.show}
@@ -136,7 +137,7 @@ showInfo() {
                 {data.quantity}
                 <button className="btn" onClick={e=>{this.updateCart(data.id,+1)}} disabled={data.quantity==data.attributes.stock} style={{backgroundColor:"transparent",border:"0",boxShadow:"none",outline:"none"}} ><i style={{fontSize:"15px",margin:"1px",color:"black"}}   className="large material-icons">add</i></button>
                 </p>
-                <p>Size: {data.attributes.size}</p>
+                <p>Size: {data.attributes.size} </p>
                 <b style={{color:'#2C0F4D'}}>${Math.round((data.price*data.quantity + Number.EPSILON) * 100) / 100}</b>
                 <small className="form-text text-muted">${data.price} each</small>
                  </div>
