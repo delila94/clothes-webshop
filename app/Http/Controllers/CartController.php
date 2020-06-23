@@ -9,7 +9,7 @@ use App\Clothes;
 use App\Clothes_properties;
 use App\Category;
 
-class cartController extends Controller
+class CartController extends Controller
 {
     //
     public function add (Request $res)

@@ -29,15 +29,15 @@ Route:: get('category', function(){
         return  \App\Category::all();   
 });
 
-Route::post('show', 'cartController@show');  
-Route::post('showCat', 'cartController@showCategory');  
-Route:: get ('category/{category}','cartController@show');
-Route:: post ('add','cartController@add');
-Route:: post ('update','cartController@updateCart');
-Route::post('remove','cartController@remove');
-Route::get ('total','cartController@getTotal');
-Route::get('subtotal','cartController@getSubTotal');
-Route::post('updateStock','cartController@update');
-Route:: get ('cart','cartController@getCart');
-Route:: get('clear','cartController@clearCart');
+Route::post('show', 'CartController@show');  
+Route::post('showCat', 'CartController@showCategory');  
+Route:: get ('category/{category}','CartController@show');
+Route:: post ('add','CartController@add');
+Route:: post ('update','CartController@updateCart');
+Route::post('remove','CartController@remove');
+Route::get ('total','CartController@getTotal');
+Route::get('subtotal','CartController@getSubTotal');
+Route::post('updateStock','CartController@update');
+Route:: get ('cart','CartController@getCart');
+Route:: get('clear','CartController@clearCart');
 
