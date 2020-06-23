@@ -1,0 +1,119 @@
+#linkid {
+    color: #999D9F;
+    text-decoration: none;
+  }
+  
+  #linkid:hover {
+    color: #6996FF;
+    cursor: pointer;
+    text-decoration: none
+  }
+  #social-icons{
+    background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear;
+    transition:all .2s linear;
+  }
+  
+  #social-icons:hover
+  {
+    color:#fff;
+    background-color:#3b5998
+  }
+  #social-iconsDribble{
+    background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear;
+    transition:all .2s linear;
+  }
+  
+  #social-iconsDribble:hover
+  {
+    color:#fff;
+    background-color:#ea4c89
+  }
+  
+  :local(.socialicons ) {
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+  }
+  :local(.socialicons:hover ) {
+    color:#fff;
+    background-color:#00aced;
+    
+  }
+  #social-iconsL{
+    background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear;
+    transition:all .2s linear;
+  }
+
+#social-iconsL:hover
+{
+    color:#fff;
+  background-color:#007bb6
+}
+#homeButton {
+  background-color:#F1E4FF; 
+  color:#555B61;
+  font-size:16px;
+  display:inline-block;
+  line-height:80px;
+  width:270px;
+  height:80px;
+  text-align:center;
+  text-decoration: none;
+  margin-right:8px;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear;
+    transition:all .2s linear;
+}
+#homeButton:hover {
+  color:#fff;
+  background-color:#99989b
+
+}
+
