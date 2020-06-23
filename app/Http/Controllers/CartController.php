@@ -1,13 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Cart;
 use App\Clothes;
-use App\Clothes_attribute;
 use App\Clothes_properties;
-use App\Clothes_sort;
 use App\Category;
 
 class CartController extends Controller
