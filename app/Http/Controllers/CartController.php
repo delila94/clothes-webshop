@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Cart;
 use App\Clothes;
 use App\Clothes_properties;
 use App\Category;
 
-class CartController extends Controller
+class cartController extends Controller
 {
     //
     public function add (Request $res)

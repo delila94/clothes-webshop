@@ -12,6 +12,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    // Test database connection
+  /* try {
+        DB::connection()->getPdo();
+        echo "Connected successfully to: " . DB::connection()->getDatabaseName();
+       
+    } catch (\Exception $e) {
+        die("Could not connect to the database. Please check your configuration. error:" . $e );
+    }*/
+    return view('welcome');
+});
 Route::get('product', function(){ return App\Clothes::with('Category') ->get(); });
 //Route::get('product', function(){ return App\Clothes::all(); });
 Route:: get('category', function(){
@@ -29,6 +40,4 @@ Route::get('subtotal','cartController@getSubTotal');
 Route::post('updateStock','cartController@update');
 Route:: get ('cart','cartController@getCart');
 Route:: get('clear','cartController@clearCart');
-Route::get('/', function () {
-    return view('welcome');
-});
+
