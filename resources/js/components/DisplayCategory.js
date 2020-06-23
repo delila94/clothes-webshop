@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {Button, ButtonToolbar, Modal} from 'react-bootstrap';
 import NavBar from './NavBar';
 import Card from 'react-bootstrap/Card'
 import { Link, hashHistory } from 'react-router';
@@ -34,11 +33,11 @@ class DisplayCategory extends Component {
     }
       mouseEnter () {
         this.setState({ isMouseInside: true });
-        //console.log("enter",this.state.isMouseInside);
       }
       mouseLeave () {
         this.setState({ isMouseInside: false });
       }
+      //  {this.state.isMouseInside ?  <Link to={"product/"+data.id} className="btn btn-primary">View</Link>  : null}
       render(){
         return (
             <div>
@@ -51,16 +50,13 @@ class DisplayCategory extends Component {
         {this.state.category.map((data,mykey)=>
         <div key={mykey} id={data.id} onMouseEnter={this.mouseEnter.bind(this)} onMouseLeave={this.mouseLeave.bind(this)}>
                <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={data.imgZoom} />
-        {this.state.isMouseInside ?  <Link to={"product/"+data.id} className="btn btn-primary">View</Link>  : null}
-            
+               <Link to={"product/"+data.id}><Card.Img variant="top" src={data.imgZoom} /></Link>                  
         <Card.Body>
           <Card.Title><b>{data.item}</b></Card.Title>
           <Card.Text>    
           {data.price}$
           
           </Card.Text>
-          <Link to={"product/"+data.id} className="btn btn-primary">Quick View</Link>
         </Card.Body>
       </Card>
       </div>               
