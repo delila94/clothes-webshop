@@ -9,22 +9,7 @@ const shoppingBagReducer = (state = [], action) => {
       return action.payload;
     case 'GET_CONTENT_TRUE':
       return true;
-      // axios.get('cart')
-      //  .then((response) => {
-      //   console.log('response is', response);
-
-      //   dispatch({
-      //    type: 'GET_CONTENT',
-      //    payload: response.data,
-      //   });
-      // });
     default: return state;
-      // const request = axios.get('cart');
-      // console.log(request);
-      // .then((response) => help = Object.values(response.data.content));
-     // return help;
-      // return state + 1;
-   // default: return state;
   }
 };
 export default shoppingBagReducer;
