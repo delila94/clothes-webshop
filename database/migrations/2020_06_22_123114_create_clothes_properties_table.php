@@ -16,7 +16,7 @@ class CreateClothesPropertiesTable extends Migration
         Schema::create('clothes_properties', function (Blueprint $table) {
             $table->clothesID();
             $table->id();
-            $table->category_id();
+            $table->category_id(); //ovo trebaju biti forgein key rucno pravljena baza nije u migraciji
             $table->size();
             $table->color();
             $table->timestamps();

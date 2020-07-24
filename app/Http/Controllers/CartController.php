@@ -8,19 +8,14 @@ use Cart;
 use App\Clothes;
 use App\Clothes_properties;
 use App\Category;
+use App\Customer;
+use App\Order;
 
 class CartController extends Controller
 {
     //
     public function add (Request $res)
     { 
-        $condition = new \Darryldecode\Cart\CartCondition(array(
-            'name' => 'Express Shipping $15',
-            'type' => 'shipping',
-             'target' => 'subtotal', // this condition will be applied to cart's subtotal when getSubTotal() is called.
-              'value' => '+15',
-            )
-        );
         $id=$res->id;
         $prod=Clothes::find($id);
         $qty=$res->qty;
@@ -82,6 +77,18 @@ class CartController extends Controller
         return $prod;
         
 
+    }
+    public function shipping(Request $res){
+        $shipping=$res->shipping;
+        $condition = new \Darryldecode\Cart\CartCondition(array(
+            'name' => 'Shipping',
+            'type' => 'shipping',
+             'target' => 'total', // this condition will be applied to cart's subtotal when getSubTotal() is called.
+              'value' => $shipping,
+        )
+    );
+
+        Cart::condition($condition);
     }
     public function remove(Request $request)
     {

@@ -29,6 +29,8 @@ Route:: get('category', function(){
         return  \App\Category::all();   
 });
 
+
+
 Route::post('show', 'CartController@show');  
 Route::post('showCat', 'CartController@showCategory');  
 Route:: get ('category/{category}','CartController@show');
@@ -40,4 +42,7 @@ Route::get('subtotal','CartController@getSubTotal');
 Route::post('updateStock','CartController@update');
 Route:: get ('cart','CartController@getCart');
 Route:: get('clear','CartController@clearCart');
+Route:: post('shipping','CartController@shipping');
+Route:: post('storeCustomer','CustomerController@store');
+Route::post('sendbasicemail','MailController@basic_email');
 
