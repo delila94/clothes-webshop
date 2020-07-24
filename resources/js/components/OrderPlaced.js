@@ -15,12 +15,30 @@ class OrderPlaced extends Component {
   }
 
   componentDidMount() {
+    let critical = JSON.parse(localStorage.getItem('help'));
+    this.setState({
+      help: critical,
+    }, () => {
+      if (this.state.help === false) {
+        axios.get('cart')
+          .then((res) => {
+            this.setState({
+              bag: Object.values(res.data.content),
+            });
+            localStorage.setItem('help', JSON.stringify(true));
+            critical = JSON.parse(localStorage.getItem('help'));
+            this.setState({
+              help: critical,
+            }, () => { axios.get('clear'); });
+          });
+      }
+    });
     // eslint-disable-next-line space-in-parens
     // eslint-disable-next-line arrow-parens
     // since I want after someone refresh the page to see order all the time I must
     // prevent reloading cart again since after order is completed cart is empty
 
-    let critical = JSON.parse(localStorage.getItem('help'));
+    /* let critical = JSON.parse(localStorage.getItem('help'));
     this.setState({
       help: critical,
     }, () => {
@@ -43,7 +61,7 @@ class OrderPlaced extends Component {
     const critical1 = JSON.parse(localStorage.getItem('myCart')); // display cart
     this.setState({
       bag: critical1,
-    });
+    }); */
   }
 
   getBag() {

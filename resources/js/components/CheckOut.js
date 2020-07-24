@@ -22,6 +22,7 @@ class CheckOut extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeDev = this.handleChangeDev.bind(this);
     localStorage.setItem('help', JSON.stringify(false));
+    localStorage.removeItem('myCart');
   }
 
   componentDidMount() { // show total and subtotal due
