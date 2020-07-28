@@ -11,28 +11,17 @@ import FootBar from './FootBar';
 class OrderPlaced extends Component {
   constructor(props) {
     super(props);
-    this.state = { help: false, bag: [] };
+    this.state = { bag: [] };
   }
 
   componentDidMount() {
-    let critical = JSON.parse(localStorage.getItem('help'));
-    this.setState({
-      help: critical,
-    }, () => {
-      if (this.state.help === false) {
-        axios.get('cart')
-          .then((res) => {
-            this.setState({
-              bag: Object.values(res.data.content),
-            });
-            localStorage.setItem('help', JSON.stringify(true));
-            critical = JSON.parse(localStorage.getItem('help'));
-            this.setState({
-              help: critical,
-            }, () => { axios.get('clear'); });
-          });
-      }
-    });
+    axios.get('cart')
+      .then((res) => {
+        this.setState({
+          bag: Object.values(res.data.content),
+        });
+      });
+    axios.get('clear');
     // eslint-disable-next-line space-in-parens
     // eslint-disable-next-line arrow-parens
     // since I want after someone refresh the page to see order all the time I must

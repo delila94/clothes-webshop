@@ -188,7 +188,7 @@ class NavBar extends Component {
               border: '0', height: '0', borderTop: '1px solid rgba(0, 0, 0, 0.1)', borderBottom: '1px solid rgba(255, 255, 255, 0.3)',
             }}
             />
-            <Link style={{ textDecoration: 'none' }} to="/checkout"><button type="button" className=" btn-block" style={{ backgroundColor: '#2C0F4D' }}> Proceed to Check Out</button></Link>
+            <Link style={{ textDecoration: 'none' }} to={this.state.subtotal !== 0 ? '/checkout' : '#'}><button disabled={this.state.subtotal === 0} type="button" className=" btn-block" style={{ backgroundColor: '#2C0F4D' }}> Proceed to Check Out</button></Link>
 
             <hr style={{
               border: '0', height: '0', borderTop: '1px solid rgba(0, 0, 0, 0.1)', borderBottom: '1px solid rgba(255, 255, 255, 0.3)',

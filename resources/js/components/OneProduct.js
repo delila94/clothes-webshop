@@ -10,6 +10,7 @@ import axios from 'axios';
 import ReactImageMagnify from 'react-image-magnify';
 import { Button, Modal } from 'react-bootstrap';
 import { InputLabel, NativeSelect } from '@material-ui/core';
+import { Link } from 'react-router';
 import FootBar from './FootBar';
 import NavBar from './NavBar';
 
@@ -90,7 +91,12 @@ class OneProduct extends Component {
 
             <Modal.Footer>
               <Button variant="secondary" onClick={() => { this.closeModal(); }}>Continue Shopping </Button>
-              <Button variant="primary">Go to Checkout</Button>
+              <Link to="/checkout">
+                <Button variant="primary">
+                  {' '}
+                  Go to Checkout
+                </Button>
+              </Link>
             </Modal.Footer>
           </Modal>
           <div className="row" style={{ marginTop: '30px' }}>
